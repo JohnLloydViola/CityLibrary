@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+
+    <style>
+      * {
+        margin: 0;
+        padding:0;
+        box-sizing: border-box;
+        }
+     body {
+        background: #080a0d;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        min-height: 100vh;
+     }  
+
+     header {
+        height: 90px;
+        padding: 0 8%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+     }
+
+     .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 25px;
+        font-weight: bold;
+     }
+    .logo-icon {
+        color: #f5b94c;
+        font-size: 25px;
+    }
+    nav {
+        display: flex;
+        gap: 55px;
+    }
+    nav a {
+        color: #eee;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 4px;
+    }
+   nav a:hover{
+    color: #f5b94c;
+  }
+   .dashboard {
+    padding: 120px 8% 80px;
+   }
+   .dashboard-title {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #d0d0d0;
+    margin-bottom: 65px;
+   }
+   .stat {
+    height: 205px;
+    padding: 55px 50px;
+    border-right: 1px solid #292c30;
+   }
+   .stat:last-child {
+    border-right: none;
+   }
+   .label {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #ddd;
+    margin-bottom: 22px;
+   }
+   .value {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 1;
+   }
+   .popular .label {
+    color: #cda8ff;
+   }
+
+   /* RESPONSIVE */
+   @media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+    nav {
+        gap: 20px;
+    }
+    nav a {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+    .dashboard {
+        padding: 90px 5% 60px;
+    }
+    .stats {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        width: 100%;
+        max-width: 1200px;
+        margin: 80px auto;
+
+        border: 1px solid #333;
+        
+    }
+    .stat {
+        display: block;
+        width: 33.333% !important;
+        flex: 0 0 33.333% !important; 
+        padding: 50px;
+        border-right: 1px solid #333;
+        
+    }
+    .stat p {
+       margin: 0 0 15px;
+       font-size: 14px;
+       font-weight: bold;
+       letter-spacing: 3px;
+    }
+    .stat h2 {
+       font-weight: bold;
+        font-size: 38px;
+        margin: 0;
+    }
+  
+    .stat:last-child {
+        border-right: none;
+    }
+   }
+   @media (max-width: 550px) {
+     
+    nav {
+        display: none;
+    }
+    .dashboard-title {
+        margin-bottom: 40px;
+    }
+    .stat {
+        padding: 40px 30px;
+    }
+    .value {
+        font-size: 32px;
+    }
+   }
+    </style>
+</head>
+
+<body>
+    <!--DASHBOARD-->
+    <main class="dashboard">
+<h1 class="dashboard-title">
+    THE ARCHIVE AT A GLANCE
+</h1>
+<div class="stats">
+
+    <div class="stat">
+    <p>SALES</p>
+    <h2>$1000</h2>
+    </div>
+    <div class="stat popular">
+        <p>POPULAR</p>
+        <h2>Steins Gate</h2>
+    </div>
+    <div class="stat">
+        <p>TOP RATED</p>
+        <h2>Boku no Pico</h2>
+    </div>
+</div>
+    </main>
+</body>
+</html>
