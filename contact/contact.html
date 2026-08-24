@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      background: #1c1c1d;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f5f5f5;
+    }
+
+    /* Main card */
+    .contact-card {
+      width: 900px;
+      min-height: 500px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: #2A2A2B;
+      border: 1px solid #956F21;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Left side */
+    .contact-info {
+      padding: 70px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #2A2A2B;
+    }
+
+    .small-title {
+      color: #956F21;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      color: #f5f5f5;
+    }
+
+    .description {
+      color: #b8b8b8;
+      max-width: 330px;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .contact-details {
+      margin-top: 45px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-details div {
+      color: #d0d0d0;
+      font-size: 14px;
+    }
+
+    .contact-details span {
+      color: #956F21;
+      margin-right: 10px;
+    }
+
+    /* Right side */
+    .form-section {
+      padding: 70px 60px;
+      display: flex;
+      align-items: center;
+      background: #242425;
+      border-left: 1px solid rgba(149, 111, 33, 0.25);
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .input-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      color: #b8b8b8;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      background: #1f1f20;
+      border: 1px solid #444445;
+      border-radius: 8px;
+      padding: 14px 15px;
+      color: #f5f5f5;
+      font-size: 14px;
+      outline: none;
+      transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    input {
+      height: 48px;
+    }
+
+    textarea {
+      height: 125px;
+      resize: none;
+      font-family: inherit;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #956F21;
+      background: #222223;
+      box-shadow: 0 0 0 2px rgba(149, 111, 33, 0.15);
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #686869;
+    }
+
+    button {
+      width: 100%;
+      height: 48px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+      background: #956F21;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: #b0832b;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(149, 111, 33, 0.25);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 750px) {
+      body {
+        padding: 15px;
+      }
+
+      .contact-card {
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
+
+      .contact-info,
+      .form-section {
+        padding: 45px 30px;
+      }
+
+      .form-section {
+        border-left: none;
+        border-top: 1px solid rgba(149, 111, 33, 0.25);
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+
+      .contact-details {
+        margin-top: 30px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .contact-info,
+      .form-section {
+        padding: 35px 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="contact-card">
+
+    <!-- Contact information -->
+    <section class="contact-info">
+
+      <div class="small-title">
+        Get in touch and let's talk
+      </div>
+
+      <h1>
+        CONTACT US!
+      </h1>
+
+      <p class="description">
+        Have a question and recommendations in mind?
+        Send us a message and we'll get back to you soon.
+      </p>
+
+      <div class="contact-details">
+
+        <div>
+          <span>Email</span>
+          citylibrary@gmail.com
+        </div>
+
+        <div>
+          <span>Phone</span>
+          +1 234 567 890
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Contact form -->
+    <section class="form-section">
+
+      <form onsubmit="sendMessage(event)">
+
+        <div class="input-group">
+          <label for="name">Name</label>
+
+          <input
+            type="text"
+            id="name"
+            placeholder="Your name"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="you@example.com"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="message">Message</label>
+
+          <textarea
+            id="message"
+            placeholder="Tell us what you're thinking..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Send message
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+
+      const button = event.target.querySelector("button");
+
+      button.textContent = "Message sent ✓";
+      button.style.background = "#b0832b";
+
+      setTimeout(() => {
+        button.textContent = "Send message";
+        button.style.background = "#956F21";
+        event.target.reset();
+      }, 2500);
+    }
+  </script>
+
+</body>
+</html>
